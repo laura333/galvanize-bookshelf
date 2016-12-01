@@ -6,10 +6,9 @@ const bcrypt = require('bcrypt');
 
 // eslint-disable-next-line new-cap
 const router = express.Router();
-const {
-    camelizeKeys,
-    decamelizeKeys
-} = require('humps');
+const {camelizeKeys, decamelizeKeys} = require('humps');
+
+// YOUR CODE HERE
 
 router.post('/users', (req, res, next) => {
     var saltRounds = 12;
