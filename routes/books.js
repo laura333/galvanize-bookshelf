@@ -5,10 +5,7 @@ const knex = require('../knex');
 
 // eslint-disable-next-line new-cap
 const router = express.Router();
-const {
-    camelizeKeys,
-    decamelizeKeys
-} = require('humps');
+const {camelizeKeys, decamelizeKeys} = require('humps');
 
 // YOUR CODE HERE
 
@@ -110,29 +107,5 @@ router.delete('/books/:id', (req, res, next) => {
             next(err);
         });
 });
-
-// router.delete('/books/:id', (req, res, next) => {
-//     knex('books')
-//         .where('id', req.params.id)
-//         .first()
-//         .then((row) => {
-//             if (!row) {
-//                 return next();
-//             }
-//             // book = row;
-//             return knex('books')
-//                 .del()
-//                 .where('id', req.params.id);
-//         })
-//
-//         .then((row) => {
-//             var book = camelizeKeys(row);
-//             delete book.id;
-//             res.send(book);
-//         })
-//         .catch((err) => {
-//             next(err);
-//         });
-// });
 
 module.exports = router;

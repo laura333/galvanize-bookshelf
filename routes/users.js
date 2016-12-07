@@ -22,10 +22,10 @@ router.post('/users', (req, res, next) => {
         }, '*')
         .then((rows) => {
             var users = camelizeKeys(rows[0]);
-            console.log(users);
+            // console.log(users);
             delete users.hashedPassword;
             res.send(users);
-            console.log(users);
+            // console.log(users);
         })
         .catch((err) => {
             next(err);

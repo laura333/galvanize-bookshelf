@@ -8,7 +8,7 @@
     "knex": "knex",
     "lint": "eslint  --ignore-pattern public/js/vendor",
     "nf": "nf start",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "mocha"
   },
   "repository": {
@@ -32,10 +32,12 @@
     "boom": "^3.2.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "express-validation": "^1.0.1",
     "humps": "^1.1.0",
     "jsonwebtoken": "^7.1.9",
     "knex": "^0.11.7",
     "morgan": "^1.7.0",
+    "node": "^0.0.0",
     "pg": "^6.0.0"
   },
   "devDependencies": {
